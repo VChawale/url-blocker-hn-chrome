@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Blocker Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>URL Blocker Settings</h1>
+      <p class="subtitle">Block distracting sites and discover Hacker News instead</p>
+    </header>
+
+    <section class="add-url">
+      <h2>Add URL Pattern</h2>
+      <div class="input-group">
+        <input type="text" id="url-input" placeholder="e.g., ||twitter.com">
+        <button id="add-btn">Add</button>
+      </div>
+      <div class="help-text">
+        <strong>Pattern examples:</strong>
+        <ul>
+          <li><code>||twitter.com</code> - Block twitter.com and subdomains</li>
+          <li><code>||reddit.com</code> - Block reddit.com and subdomains</li>
+          <li><code>*://facebook.com/*</code> - Block all facebook URLs</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="blocklist">
+      <h2>Blocked URLs <span id="count">(0)</span></h2>
+      <ul id="blocklist"></ul>
+      <p id="empty-message">No URLs blocked yet. Add some above to get started!</p>
+    </section>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

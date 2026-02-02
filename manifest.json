@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "URL Blocker - HN Redirect",
+  "version": "1.0.0",
+  "description": "Block distracting URLs and redirect to random Hacker News articles",
+
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+
+  "host_permissions": [
+    "*://*/*"
+  ],
+
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+
+  "action": {
+    "default_title": "URL Blocker Settings"
+  },
+
+  "options_page": "options/options.html",
+
+  "web_accessible_resources": [
+    {
+      "resources": ["redirect.html", "redirect.js", "redirect.css"],
+      "matches": ["*://*/*"]
+    }
+  ]
+}
